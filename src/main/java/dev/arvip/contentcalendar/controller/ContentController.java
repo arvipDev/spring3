@@ -2,6 +2,7 @@ package dev.arvip.contentcalendar.controller;
 
 import dev.arvip.contentcalendar.model.Content;
 import dev.arvip.contentcalendar.repository.ContentCollectionRepository;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -42,13 +43,13 @@ public class ContentController {
     //make a request to add a new all content to the list
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("")
-    public void create(@RequestBody Content content){
+    public void create(@Valid @RequestBody Content content){
         repository.add(content);
     }
 
     @ResponseStatus(HttpStatus.OK)
     @PutMapping("/{id}")
-    public void update(@RequestBody Content content, @PathVariable Integer id){
+    public void update(@Valid @RequestBody Content content, @PathVariable Integer id){
         if (!repository.isAvailable(id)) throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Unable to update content, no content found");
         repository.add(content);
     }

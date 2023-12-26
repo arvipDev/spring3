@@ -13,6 +13,7 @@ import java.util.List;
 
 @RequestMapping("/api/person")
 @RestController
+@CrossOrigin
 public class PersonController {
 
     private final PersonCollectionRepository repository;
