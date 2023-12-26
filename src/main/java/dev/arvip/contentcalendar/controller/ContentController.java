@@ -1,0 +1,63 @@
+package dev.arvip.contentcalendar.controller;
+
+import dev.arvip.contentcalendar.model.Content;
+import dev.arvip.contentcalendar.repository.ContentCollectionRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.HttpStatusCodeException;
+import org.springframework.web.server.ResponseStatusException;
+
+import javax.swing.text.html.Option;
+import java.util.List;
+import java.util.Optional;
+
+@RestController
+@RequestMapping("/api/content")
+@CrossOrigin
+public class ContentController {
+    // Annotations added to this class says this class will receive request and send response. CRUD
+    // CrossOrigin annotation is to allow the resources to be accessed via CORS on browser/front end.
+    private final ContentCollectionRepository repository;
+
+    //@Autowired
+    public ContentController(ContentCollectionRepository repository){
+        this.repository = repository;
+    }
+
+    //make a request to find all content to the list
+    @GetMapping("")
+    public List<Content> findAll() {
+        return repository.findAll();
+    }
+
+    //make a request to find a content to the list using id
+    @GetMapping("/{id}")
+    public Content findById(@PathVariable Integer id){
+        return repository.find(id).orElseThrow(
+       () -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Content not found!")
+    );
+    }
+
+    //make a request to add a new all content to the list
+    @ResponseStatus(HttpStatus.CREATED)
+    @PostMapping("")
+    public void create(@RequestBody Content content){
+        repository.add(content);
+    }
+
+    @ResponseStatus(HttpStatus.OK)
+    @PutMapping("/{id}")
+    public void update(@RequestBody Content content, @PathVariable Integer id){
+        if (!repository.isAvailable(id)) throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Unable to update content, no content found");
+        repository.add(content);
+    }
+
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    @DeleteMapping("/{id}")
+    public void remove(@PathVariable Integer id){
+        if(!repository.isAvailable(id)) throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Unable to delete content, no content found");
+        repository.delete(id);
+    }
+
+}
