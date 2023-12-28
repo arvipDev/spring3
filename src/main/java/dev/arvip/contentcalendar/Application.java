@@ -1,16 +1,7 @@
 package dev.arvip.contentcalendar;
 
-import dev.arvip.contentcalendar.controller.ContentController;
-import dev.arvip.contentcalendar.repository.ContentCollectionRepository;
-import jakarta.servlet.MultipartConfigElement;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.web.client.RestTemplate;
-
-import javax.swing.*;
-import java.util.Arrays;
 /*
 * CTRL SHIFT / for block comment
 * CTRL / for line comment

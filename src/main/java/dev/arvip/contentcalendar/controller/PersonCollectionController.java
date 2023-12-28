@@ -8,18 +8,17 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.net.http.HttpResponse;
 import java.util.List;
 
 @RequestMapping("/api/person")
 @RestController
 @CrossOrigin
-public class PersonController {
+public class PersonCollectionController {
 
     private final PersonCollectionRepository repository;
 
     @Autowired
-    public PersonController(PersonCollectionRepository repository){
+    public PersonCollectionController(PersonCollectionRepository repository){
         this.repository = repository;
     }
 

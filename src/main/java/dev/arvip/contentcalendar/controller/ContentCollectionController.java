@@ -3,26 +3,22 @@ package dev.arvip.contentcalendar.controller;
 import dev.arvip.contentcalendar.model.Content;
 import dev.arvip.contentcalendar.repository.ContentCollectionRepository;
 import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.HttpStatusCodeException;
 import org.springframework.web.server.ResponseStatusException;
 
-import javax.swing.text.html.Option;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/content")
 @CrossOrigin
-public class ContentController {
+public class ContentCollectionController {
     // Annotations added to this class says this class will receive request and send response. CRUD
     // CrossOrigin annotation is to allow the resources to be accessed via CORS on browser/front end.
     private final ContentCollectionRepository repository;
 
     //@Autowired
-    public ContentController(ContentCollectionRepository repository){
+    public ContentCollectionController(ContentCollectionRepository repository){
         this.repository = repository;
     }
 
