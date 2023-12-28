@@ -33,8 +33,20 @@ public class ContentJdbcController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("")
-    public void addContent(@RequestBody Content content){
+    public void add(@RequestBody Content content){
         repository.createContent(content);
+    }
+
+    @ResponseStatus(HttpStatus.OK)
+    @PutMapping("/{id}")
+    public void update(@RequestBody Content content, @PathVariable Integer id){
+        repository.updateContent(content, id);
+    }
+
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Integer id){
+        repository.deleteContent(id);
     }
 
 }

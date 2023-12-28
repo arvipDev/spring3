@@ -5,6 +5,7 @@ import dev.arvip.contentcalendar.model.Status;
 import dev.arvip.contentcalendar.model.Type;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.http.HttpRange;
 import org.springframework.http.HttpStatus;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -61,5 +62,21 @@ public class ContentJdbcTemplateRepository {
         String query = "INSERT INTO Content (date_created, desc, title, status, content_type, url) " +
                 "VALUES ( ?, ?, ?, ?, ?, ?);";
         jdbcTemplate.update(query, content.dateCreated(), content.desc(), content.title(), String.valueOf(content.status()), String.valueOf(content.contentType()), content.url());
+    }
+
+    public void updateContent(Content content, Integer id) {
+        if (getById(id) == null) {
+            createContent(content);
+            throw new ResponseStatusException(HttpStatus.CREATED);
+        }
+        String query = "UPDATE Content SET date_updated=?, desc=?, title=?, status=?, content_type=?, url=? WHERE id=?";
+        jdbcTemplate.update(query, content.dateUpdated(), content.desc(), content.title(),
+                String.valueOf(content.status()), String.valueOf(content.contentType()), content.url(), id);
+    }
+
+    public void deleteContent(Integer id) {
+        if (getById(id) == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        String query = "DELETE FROM Content WHERE id=?";
+        jdbcTemplate.update(query, id);
     }
 }
