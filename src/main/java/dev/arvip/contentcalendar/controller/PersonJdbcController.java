@@ -36,7 +36,6 @@ public class PersonJdbcController {
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("")
     public void create(@RequestBody Person person){
-        //if (repository.getById(person.personId()) != null) throw new ResponseStatusException(HttpStatus.OK);
         repository.addPerson(person);
     }
 
