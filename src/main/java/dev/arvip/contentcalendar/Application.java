@@ -23,7 +23,6 @@ public class Application {
 		System.out.println(restTemp);
 		Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);*/
 		//----------------------
-
 		SpringApplication.run(Application.class, args);;
 	}
 }

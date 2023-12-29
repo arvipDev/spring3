@@ -42,8 +42,7 @@ public class ContentJdbcTemplateRepository {
 
     public List<Content> getAll(){
         String query = "SELECT * FROM Content";
-        List<Content> contentList = jdbcTemplate.query(query, ContentJdbcTemplateRepository::mapRow);
-        return contentList;
+        return jdbcTemplate.query(query, ContentJdbcTemplateRepository::mapRow);
     }
 
     public Content getById(Integer id) {

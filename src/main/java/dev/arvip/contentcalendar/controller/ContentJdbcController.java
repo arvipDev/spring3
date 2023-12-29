@@ -12,7 +12,7 @@ import java.util.List;
 @RequestMapping("/api/jdbc/content")
 @CrossOrigin
 public class ContentJdbcController {
-    private ContentJdbcTemplateRepository repository;
+    private final ContentJdbcTemplateRepository repository;
 
     public ContentJdbcController(ContentJdbcTemplateRepository repository){
         this.repository = repository;

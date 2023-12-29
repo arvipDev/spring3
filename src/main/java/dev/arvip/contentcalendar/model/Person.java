@@ -3,7 +3,7 @@ package dev.arvip.contentcalendar.model;
 public record Person(
         String firstName,
         String lastName,
-        Integer Age,
+        Integer age,
         Sex sex,
         String phoneNumber,
         String address,

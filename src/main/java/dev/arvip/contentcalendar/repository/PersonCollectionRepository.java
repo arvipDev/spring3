@@ -3,9 +3,7 @@ package dev.arvip.contentcalendar.repository;
 import dev.arvip.contentcalendar.model.Person;
 import dev.arvip.contentcalendar.model.Sex;
 import jakarta.annotation.PostConstruct;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Repository;
-import org.springframework.web.server.ResponseStatusException;
 
 import java.util.ArrayList;
 import java.util.List;
