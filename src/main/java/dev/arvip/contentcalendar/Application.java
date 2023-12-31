@@ -1,9 +1,8 @@
 package dev.arvip.contentcalendar;
 
-import dev.arvip.contentcalendar.model.Content;
-import dev.arvip.contentcalendar.model.Status;
-import dev.arvip.contentcalendar.model.Type;
+import dev.arvip.contentcalendar.model.*;
 import dev.arvip.contentcalendar.repository.ContentRepository;
+import dev.arvip.contentcalendar.repository.PersonRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -35,8 +34,18 @@ public class Application {
 	}
 
 	@Bean
-	CommandLineRunner commandLineRunner(ContentRepository repository){
+	CommandLineRunner commandLineRunner(ContentRepository contentRepository, PersonRepository personRepository){
 		return args -> {
+			Person person = new Person(
+					"Arvind",
+					"Purushotham",
+					32,
+					Sex.MALE,
+					"+1-990-2930-265",
+					"13245 Monroe Way",
+					null
+			);
+			personRepository.save(person);
 			Content content = new Content(
 					LocalDateTime.now(),
 					null,
@@ -47,7 +56,7 @@ public class Application {
 					Type.ARTICLE,
 					""
 			);
-			repository.save(content);
+			contentRepository.save(content);
 		};
 	}
 }

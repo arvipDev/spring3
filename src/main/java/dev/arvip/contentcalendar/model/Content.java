@@ -9,7 +9,7 @@ import org.springframework.format.annotation.NumberFormat;
 
 import java.time.LocalDateTime;
 
-@Table("Content_Tbl")
+//@Table("Content_Tbl")
 public record Content(
 
         @DateTimeFormat @NotNull

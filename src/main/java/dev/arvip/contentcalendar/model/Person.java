@@ -1,5 +1,7 @@
 package dev.arvip.contentcalendar.model;
 
+import org.springframework.data.annotation.Id;
+
 public record Person(
         String firstName,
         String lastName,
@@ -7,6 +9,7 @@ public record Person(
         Sex sex,
         String phoneNumber,
         String address,
+        @Id
         Integer personId
 ) {
 }
