@@ -10,7 +10,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/content")
+@RequestMapping("/api/local/content")
 @CrossOrigin
 public class ContentCollectionController {
     // Annotations added to this class says this class will receive request and send response. CRUD
