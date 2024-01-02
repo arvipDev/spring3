@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
 
+//dummy endpoint to shoe configuration properties are picked up by code.
 @RestController
 @RequestMapping("/")
 public class HomeController {
@@ -29,7 +30,7 @@ public class HomeController {
     @Value("${cc.appStatus}")
     private String appStatus;
 
-    private ContentCalendarConfiguration config;
+    private final ContentCalendarConfiguration config;
     public HomeController(ContentCalendarConfiguration config){
         this.config = config;
     }

@@ -13,13 +13,14 @@ import dev.arvip.contentcalendar.repository.ContentJdbcTemplateRepository;
 import dev.arvip.contentcalendar.repository.ContentRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Profile;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 
 import java.time.LocalDateTime;
 import java.util.function.Consumer;
-
+@Profile("!dev")
 @Component
 public class DataLoader implements CommandLineRunner {
 
