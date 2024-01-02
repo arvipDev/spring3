@@ -1,0 +1,37 @@
+spring:
+  h2:
+    console:
+      path: /h2
+      enabled: true
+      # for security purposes, apply following 2 properties
+      settings:
+        trace: false
+        # prevents remote access
+        web-allow-others: false
+  datasource:
+    generate-unique-name: false
+    name: myapp
+
+logging:
+  level:
+    org:
+      springframework:
+        jdbc: DEBUG
+
+
+#server.port=8085
+an: My new app
+as: dev in progress
+cc:
+  appName: My new app name
+  appStatus: My new aoo status - dev in progress
+
+#spring.profiles.active=dev
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
