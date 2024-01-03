@@ -11,6 +11,8 @@ spring:
   datasource:
     generate-unique-name: false
     name: myapp
+  profiles:
+    active: production
 
 logging:
   level:
@@ -20,11 +22,11 @@ logging:
 
 
 #server.port=8085
-an: My new app
-as: dev in progress
-cc:
-  appName: My new app name
-  appStatus: My new aoo status - dev in progress
+#an: My new app
+#as: dev in progress
+#cc:
+#  appName: My new app name
+#  appStatus: My new aoo status - dev in progress
 
 #spring.profiles.active=dev
 management:
@@ -35,11 +37,3 @@ management:
   endpoint:
     health:
       show-details: always
-
-test:
-  one: "Value of one"
-  two: "Value of two"
-
-exam:
-  aOne: "Value of one"
-  aTwo: "Value of two"

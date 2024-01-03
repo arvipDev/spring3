@@ -20,7 +20,7 @@ import org.springframework.stereotype.Controller;
 
 import java.time.LocalDateTime;
 import java.util.function.Consumer;
-@Profile("!dev")
+@Profile("production")
 @Component
 public class DataLoader implements CommandLineRunner {
 
