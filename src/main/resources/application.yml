@@ -35,3 +35,11 @@ management:
   endpoint:
     health:
       show-details: always
+
+test:
+  one: "Value of one"
+  two: "Value of two"
+
+exam:
+  aOne: "Value of one"
+  aTwo: "Value of two"

@@ -24,20 +24,20 @@ public class HomeController {
         return Map.of("appName", an, "appStatus", as);
     }
 
-    // Type 2 of inserting configuration into code - Uses object and much better than type 1
-    @Value("${cc.appName}")
+    // These are for testing nested content for type 1
+/*    @Value("${cc.appName}")
     private String appName;
     @Value("${cc.appStatus}")
-    private String appStatus;
+    private String appStatus;*/
 
+    // Type 2 of inserting configuration into code - Uses object and much better than type 1
     private final ContentCalendarConfiguration config;
     public HomeController(ContentCalendarConfiguration config){
         this.config = config;
     }
 
-    @GetMapping("/{atConfig}")
+    @GetMapping("/atConfig")
     public ContentCalendarConfiguration printTwo(){
         return config;
     }
-
 }
