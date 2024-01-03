@@ -1,0 +1,56 @@
+[
+  {
+    "firstName": "Arvind",
+    "lastName": "Purushotham",
+    "age": 32,
+    "sex": "MALE",
+    "phoneNumber": "+1-990-2930-265",
+    "address": "13245 Monroe Way",
+    "personId": null
+  },
+  {
+    "firstName": "Sneha",
+    "lastName": "Billinti",
+    "age": 32,
+    "sex": "FEMALE",
+    "phoneNumber": "+1-734-9108-123",
+    "address": "Monroe Way, Thornton",
+    "personId": null
+  },
+  {
+    "firstName": "John",
+    "lastName": "Constantine",
+    "age": 35,
+    "sex": "MALE",
+    "phoneNumber": "+1-734-9108-123",
+    "address": "Alex park",
+    "personId": null
+  },
+  {
+    "firstName": "Bruce",
+    "lastName": "Wayne",
+    "age": 48,
+    "sex": "MALE",
+    "phoneNumber": "+1-734-9108-123",
+    "address": "Wayne Mansion, Gautham City",
+    "personId": null
+  },
+  {
+    "firstName": "Mark",
+    "lastName": "Antony",
+    "age": 60,
+    "sex": "MALE",
+    "phoneNumber": "+1-734-9108-123",
+    "address": "Chennai",
+    "personId": null
+  },
+  {
+    "firstName": "Black",
+    "lastName": "Panther",
+    "age": 18,
+    "sex": "MALE",
+    "phoneNumber": "+1-734-9108-123",
+    "address": "Wakanda",
+    "personId": null
+  }
+]

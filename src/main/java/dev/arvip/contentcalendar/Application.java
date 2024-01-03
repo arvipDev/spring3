@@ -36,7 +36,7 @@ public class Application {
 		SpringApplication.run(Application.class, args);;
 	}
 
-	@Bean
+	/*@Bean
 	CommandLineRunner commandLineRunner(ContentRepository contentRepository, PersonRepository personRepository){
 		return args -> {
 			Person person = new Person(
@@ -61,5 +61,5 @@ public class Application {
 			);
 			contentRepository.save(content);
 		};
-	}
+	}*/
 }
