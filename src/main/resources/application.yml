@@ -1,18 +1,18 @@
-#spring:
-#  h2:
-#    console:
-#      path: /h2
-#      enabled: true
-#      # for security purposes, apply following 2 properties
-#      settings:
-#        trace: false
-#        # prevents remote access
-#        web-allow-others: false
-#  datasource:
-#    generate-unique-name: false
-#    name: myapp
+spring:
+  h2:
+    console:
+      path: /h2
+      enabled: true
+      # for security purposes, apply following 2 properties
+      settings:
+        trace: false
+        # prevents remote access
+        web-allow-others: false
+  datasource:
+    generate-unique-name: false
+    name: myapp
 #  profiles:
-#    active: dev
+#    active: production
 
 #logging:
 #  level:
