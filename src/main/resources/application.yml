@@ -40,8 +40,8 @@ management:
 spring:
   datasource:
     url: jdbc:postgres://localhost:5432/postgres
-    username: postgres
-    password:
+    username: {usr}
+    password: {pwd}
     generate-unique-name: false
     name: myapp
     initialize: true
