@@ -39,9 +39,9 @@ management:
 
 spring:
   datasource:
-    url: jdbc:postgres://localhost:5432/postgres
-    username: {usr}
-    password: {pwd}
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: ${USR}
+    password: ${PWD}
     generate-unique-name: false
     name: myapp
     initialize: true
