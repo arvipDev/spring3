@@ -14,11 +14,11 @@ spring:
 #  profiles:
 #    active: dev
 
-logging:
-  level:
-    org:
-      springframework:
-        jdbc: DEBUG
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        jdbc: DEBUG
 
 
 #server.port=8085

@@ -1,8 +1,8 @@
 CREATE TABLE IF NOT EXISTS Content (
     date_created TIMESTAMP NOT NULL,
     date_updated TIMESTAMP,
-    id int NOT NULL AUTO_INCREMENT,
-    desc TEXT,
+    id int NOT NULL ,
+    description TEXT,
     title VARCHAR(255) NOT NULL,
     status VARCHAR(20) NOT NULL,
     content_type VARCHAR(50) NOT NULL,

@@ -3,6 +3,7 @@ package dev.arvip.contentcalendar.model;
 import jakarta.annotation.Nullable;
 import jakarta.validation.constraints.*;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.NumberFormat;
@@ -19,6 +20,8 @@ public record Content(
         @Id
         @NumberFormat
         Integer id,
+
+        @Column(value = "description")
         @NotBlank(message = "description is mandatory")
         String desc,
         @NotBlank(message = "title is mandatory")

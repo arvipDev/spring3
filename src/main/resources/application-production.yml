@@ -3,3 +3,12 @@ as: production in progress
 cc:
   appName: My new app name
   appStatus: My new aoo status - production in progress
+
+spring:
+  datasource:
+    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
+    username: ${PGUSER}
+    password: ${PGPASSWORD}
+  sql:
+    init:
+      mode: always
