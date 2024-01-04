@@ -6,9 +6,9 @@ cc:
 
 spring:
   datasource:
-    url: postgresql://${{PGUSER}}:${{POSTGRES_PASSWORD}}@${{RAILWAY_PRIVATE_DOMAIN}}:5432/${{PGDATABASE}}
-    username: ${PGUSER}
-    password: ${PGPASSWORD}
+    url: jdbc:postgres://localhost:5432/postgres
+    username: postgres
+    password: postgres
 #"postgresql://${{PGUSER}}:${{POSTGRES_PASSWORD}}@${{RAILWAY_TCP_PROXY_DOMAIN}}:${{RAILWAY_TCP_PROXY_PORT}}/${{PGDATABASE}}
   sql:
     init:

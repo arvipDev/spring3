@@ -1,13 +1,13 @@
 CREATE TABLE IF NOT EXISTS Content (
     date_created TIMESTAMP NOT NULL,
     date_updated TIMESTAMP,
-    id int NOT NULL ,
+    id SERIAL PRIMARY KEY ,
     description TEXT,
     title VARCHAR(255) NOT NULL,
     status VARCHAR(20) NOT NULL,
     content_type VARCHAR(50) NOT NULL,
-    url VARCHAR(255),
-    primary key (id)
+    url VARCHAR(255)
+--    primary key (id)
 );
 
 --INSERT INTO Content (date_created, date_updated, desc, title, status, content_type, url)
@@ -20,8 +20,8 @@ CREATE TABLE IF NOT EXISTS Person (
     sex TEXT NOT NULL,
     phone_number TEXT NOT NULL,
     address TEXT NOT NULL,
-    person_id int NOT NULL AUTO_INCREMENT,
-    primary key (person_id)
+    person_id SERIAL PRIMARY KEY
+--    primary key (person_id)
 );
 
 --INSERT INTO Person (first_name, last_name, age, sex, phone_number, address)
