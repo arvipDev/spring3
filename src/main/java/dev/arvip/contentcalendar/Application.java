@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 * CTRL / for line comment
 * */
 
-@EnableConfigurationProperties({ContentCalendarConfiguration.class})
+//@EnableConfigurationProperties({ContentCalendarConfiguration.class})
 @SpringBootApplication
 public class Application {
 	//https://start.spring.io/
