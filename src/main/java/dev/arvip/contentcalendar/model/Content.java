@@ -26,7 +26,9 @@ public record Content(
         String desc,
         @NotBlank(message = "title is mandatory")
         String title,
+        @Bean
         Status status,
+        @Bean
         Type contentType,
         String url
 ) {
