@@ -13,15 +13,18 @@ management:
     health:
       show-details: always
 
-#spring:
-#  datasource:
-#    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
-#    username: ${PGUSER}
-#    password: ${PGPASSWORD}
-#    generate-unique-name: false
-#    name: myapp
-#    initialize: true
-#  sql:
-#    init:
-#      mode: always
-#      schema-locations: classpath:schema.sql
+      #"DATABASE_PRIVATE_URL": "postgresql://${{PGUSER}}:${{POSTGRES_PASSWORD}}@${{RAILWAY_PRIVATE_DOMAIN}}:5432/${{PGDATABASE}}",
+      #"DATABASE_URL": "postgresql://${{PGUSER}}:${{POSTGRES_PASSWORD}}@${{RAILWAY_TCP_PROXY_DOMAIN}}:${{RAILWAY_TCP_PROXY_PORT}}/${{PGDATABASE}}",
+
+spring:
+  datasource:
+    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
+    username: ${PGUSER}
+    password: ${PGPASSWORD}
+    generate-unique-name: false
+    name: myapp
+    initialize: true
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql

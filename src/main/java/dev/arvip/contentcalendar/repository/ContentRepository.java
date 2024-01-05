@@ -2,7 +2,6 @@ package dev.arvip.contentcalendar.repository;
 
 import dev.arvip.contentcalendar.model.Content;
 import dev.arvip.contentcalendar.model.Status;
-import org.springframework.context.annotation.Bean;
 import org.springframework.data.jdbc.repository.query.Query;
 import org.springframework.data.repository.ListCrudRepository;
 import org.springframework.data.repository.query.Param;

@@ -40,7 +40,6 @@ public class DataLoader implements CommandLineRunner {
                 contentRepository.saveAll(objectMapper.readValue(inputStream, new TypeReference<List<Content>>(){}));
             }
         }
-
         if (personRepository.count() == 0){
             try(InputStream input = TypeReference.class.getResourceAsStream("/data/person.json")){
                 personRepository.saveAll(objectMapper.readValue(input, new TypeReference<List<Person>>(){}));
