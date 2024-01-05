@@ -1,29 +1,29 @@
-##an: My new app
-##as: production in progress
-##cc:
-##  appName: My new app name
-##  appStatus: My new aoo status - production in progress
-##
-##management:
-##  endpoints:
-##    web:
-##      exposure:
-##        include: "*"
-##  endpoint:
-##    health:
-##      show-details: always
+#an: My new app
+#as: production in progress
+#cc:
+#  appName: My new app name
+#  appStatus: My new aoo status - production in progress
 #
-#spring:
-#  datasource:
-#    #url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
-#    url: jdbc:postgresql://${RAILWAY_TCP_PROXY_DOMAIN}:${RAILWAY_TCP_PROXY_DOMAIN}/${POSTGRES_DB}
-#    #url: postgresql://${PGUSER}:${POSTGRES_PASSWORD}@${RAILWAY_TCP_PROXY_DOMAIN}:${RAILWAY_TCP_PROXY_PORT}/${PGDATABASE}"
-#    username: ${PGUSER}
-#    password: ${PGPASSWORD} #@${RAILWAY_TCP_PROXY_DOMAIN}
-##    generate-unique-name: false
-##    name: myapp
-##    initialize: true
-#  sql:
-#    init:
-#      mode: always
-#      schema-locations: classpath:schema.sql
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+#  endpoint:
+#    health:
+#      show-details: always
+
+spring:
+  datasource:
+    #url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
+    url: jdbc:postgresql://${RAILWAY_TCP_PROXY_DOMAIN}:${RAILWAY_TCP_PROXY_DOMAIN}/${POSTGRES_DB}
+    #url: postgresql://${PGUSER}:${POSTGRES_PASSWORD}@${RAILWAY_TCP_PROXY_DOMAIN}:${RAILWAY_TCP_PROXY_PORT}/${PGDATABASE}"
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD} #@${RAILWAY_TCP_PROXY_DOMAIN}
+#    generate-unique-name: false
+#    name: myapp
+#    initialize: true
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
