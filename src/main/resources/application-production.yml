@@ -18,8 +18,8 @@ spring:
     #url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
     url: jdbc:postgresql://viaduct.proxy.rlwy.net:25741/railway
     #url: postgresql://${PGUSER}:${POSTGRES_PASSWORD}@${RAILWAY_TCP_PROXY_DOMAIN}:${RAILWAY_TCP_PROXY_PORT}/${PGDATABASE}"
-    username: ${POSTGRES_USER}
-    password: ${POSTGRES_PASSWORD} #@${RAILWAY_TCP_PROXY_DOMAIN}
+    username: postgres
+    password: ${PGPASSWORD} #@${RAILWAY_TCP_PROXY_DOMAIN}
 #    generate-unique-name: false
 #    name: myapp
 #    initialize: true
