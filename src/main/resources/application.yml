@@ -42,9 +42,9 @@ spring:
     url: jdbc:postgresql://localhost:5432/postgres
     username: ${USR}
     password: ${PWD}
-    generate-unique-name: false
-    name: myapp
-    initialize: true
+#    generate-unique-name: false
+#    name: myapp
+#    initialize: true
   sql:
     init:
       mode: always

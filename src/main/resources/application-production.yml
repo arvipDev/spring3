@@ -1,29 +1,26 @@
-an: My new app
-as: production in progress
-cc:
-  appName: My new app name
-  appStatus: My new aoo status - production in progress
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: always
-
-      #"DATABASE_PRIVATE_URL": "postgresql://${{PGUSER}}:${{POSTGRES_PASSWORD}}@${{RAILWAY_PRIVATE_DOMAIN}}:5432/${{PGDATABASE}}",
-      #"DATABASE_URL": "postgresql://${{PGUSER}}:${{POSTGRES_PASSWORD}}@${{RAILWAY_TCP_PROXY_DOMAIN}}:${{RAILWAY_TCP_PROXY_PORT}}/${{PGDATABASE}}",
+#an: My new app
+#as: production in progress
+#cc:
+#  appName: My new app name
+#  appStatus: My new aoo status - production in progress
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+#  endpoint:
+#    health:
+#      show-details: always
 
 spring:
   datasource:
     url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
     username: ${PGUSER}
     password: ${PGPASSWORD}
-    generate-unique-name: false
-    name: myapp
-    initialize: true
+#    generate-unique-name: false
+#    name: myapp
+#    initialize: true
   sql:
     init:
       mode: always
