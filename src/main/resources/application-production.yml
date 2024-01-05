@@ -16,7 +16,7 @@
 spring:
   datasource:
     #url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
-    url: jdbc:postgresql://${RAILWAY_TCP_PROXY_DOMAIN}:${RAILWAY_TCP_PROXY_PORT}/${POSTGRES_DB}
+    url: jdbc:postgresql://${RAILWAY_TCP_PROXY_DOMAIN}:25741/${POSTGRES_DB}
     #url: postgresql://${PGUSER}:${POSTGRES_PASSWORD}@${RAILWAY_TCP_PROXY_DOMAIN}:${RAILWAY_TCP_PROXY_PORT}/${PGDATABASE}"
     username: ${POSTGRES_USER}
     password: ${POSTGRES_PASSWORD} #@${RAILWAY_TCP_PROXY_DOMAIN}
