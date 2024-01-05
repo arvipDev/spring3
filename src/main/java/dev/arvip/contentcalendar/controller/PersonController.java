@@ -17,7 +17,7 @@ import java.util.List;
 public class PersonController {
     private final PersonRepository repository;
 
-    @Autowired
+    //@Autowired
     public PersonController(PersonRepository repository){
         this.repository = repository;
     }

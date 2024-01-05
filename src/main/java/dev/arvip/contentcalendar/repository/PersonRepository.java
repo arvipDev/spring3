@@ -10,7 +10,6 @@ public interface PersonRepository extends ListCrudRepository<Person, Integer> {
 
     List<Person> getAllByAge(Integer age);
 
-
     Person getBySex(Sex sex);
 
 }
