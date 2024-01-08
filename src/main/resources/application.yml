@@ -1,27 +1,3 @@
-#spring:
-#  h2:
-#    console:
-#      path: /h2
-#      enabled: true
-#      # for security purposes, apply following 2 properties
-#      settings:
-#        trace: false
-#        # prevents remote access
-#        web-allow-others: false
-#  datasource:
-#    generate-unique-name: false
-#    name: myapp
-#  profiles:
-#    active: production
-
-#logging:
-#  level:
-#    org:
-#      springframework:
-#        jdbc: DEBUG
-
-
-#server.port=8085
 an: My new app
 as: dev in progress
 cc:
@@ -42,9 +18,6 @@ spring:
     url: jdbc:postgresql://localhost:5432/postgres
     username: ${USR}
     password: ${PWD}
-#    generate-unique-name: false
-#    name: myapp
-#    initialize: true
   sql:
     init:
       mode: always

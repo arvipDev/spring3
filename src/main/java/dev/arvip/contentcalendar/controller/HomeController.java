@@ -8,12 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
 
-//dummy endpoint to shoe configuration properties are picked up by code.
 @RestController
 @RequestMapping("/")
 public class HomeController {
 
-    // Type 1 of inserting configuration into code
     @Value("${an: default app name}")
     private String an;
     @Value("${as: default app status}")
@@ -23,14 +21,6 @@ public class HomeController {
     public Map<String, String> print(){
         return Map.of("appName", an, "appStatus", as);
     }
-
-    // These are for testing nested content for type 1
-/*    @Value("${cc.appName}")
-    private String appName;
-    @Value("${cc.appStatus}")
-    private String appStatus;*/
-
-    // Type 2 of inserting configuration into code - Uses object and much better than type 1
     private final ContentCalendarConfiguration config;
     public HomeController(ContentCalendarConfiguration config){
         this.config = config;

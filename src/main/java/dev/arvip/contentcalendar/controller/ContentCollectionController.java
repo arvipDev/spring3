@@ -13,22 +13,16 @@ import java.util.List;
 @RequestMapping("/api/local/content")
 @CrossOrigin
 public class ContentCollectionController {
-    // Annotations added to this class says this class will receive request and send response. CRUD
-    // CrossOrigin annotation is to allow the resources to be accessed via CORS on browser/front end.
     private final ContentCollectionRepository repository;
-
-    //@Autowired
     public ContentCollectionController(ContentCollectionRepository repository){
         this.repository = repository;
     }
 
-    //make a request to find all content to the list
     @GetMapping("")
     public List<Content> findAll() {
         return repository.findAll();
     }
 
-    //make a request to find a content to the list using id
     @GetMapping("/{id}")
     public Content findById(@PathVariable Integer id){
         return repository.find(id).orElseThrow(
@@ -36,7 +30,6 @@ public class ContentCollectionController {
     );
     }
 
-    //make a request to add a new all content to the list
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("")
     public void create(@Valid @RequestBody Content content){

@@ -21,8 +21,7 @@ public class PersonCollectionRepository {
     }
 
     public Optional<Person> find(Integer id){
-        //if(personList.stream().filter(p -> p.personId().equals(id)).count() == 1) return personList.get(id);
-        return personList.stream().filter(p -> p.personId().equals(id)).findFirst();
+       return personList.stream().filter(p -> p.personId().equals(id)).findFirst();
     }
 
     public void create(Person person){

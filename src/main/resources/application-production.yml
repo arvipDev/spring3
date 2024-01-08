@@ -1,18 +1,3 @@
-#an: My new app
-#as: production in progress
-#cc:
-#  appName: My new app name
-#  appStatus: My new aoo status - production in progress
-#
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: "*"
-#  endpoint:
-#    health:
-#      show-details: always
-
 spring:
   datasource:
     url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}

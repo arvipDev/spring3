@@ -41,8 +41,6 @@ public class ContentCollectionRepository {
         return contentList.stream().filter(c -> c.id().equals(id)).count() == 1;
     }
 
-    //@PostConstruct signifies that this method will be implemented
-    //after the class is initialized/after the constructor is called
     @PostConstruct
     private void init(){
         Content content = new Content(

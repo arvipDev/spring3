@@ -42,7 +42,6 @@ public class ContentController {
     @ResponseStatus(HttpStatus.CREATED)
     @PutMapping("/{id}")
     public void update(@RequestBody Content content, @PathVariable Integer id){
-        //This is just an update and not upsert
         repository.save(content);
     }
 

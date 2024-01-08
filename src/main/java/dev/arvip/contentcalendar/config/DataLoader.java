@@ -1,8 +1,4 @@
 package dev.arvip.contentcalendar.config;
-/*This class is run after Dependency Injection adn while the API is getting started.
-        This can be used to run code that was previously run in init()@PostCOnstructor method.
-        This can be used to write some boot strap code.*/
-
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.arvip.contentcalendar.model.Content;
@@ -17,7 +13,6 @@ import org.springframework.stereotype.Component;
 import java.io.InputStream;
 import java.util.List;
 
-//@Profile("dev")
 @Component
 public class DataLoader implements CommandLineRunner {
 
