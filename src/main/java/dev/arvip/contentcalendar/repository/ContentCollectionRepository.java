@@ -4,11 +4,8 @@ import dev.arvip.contentcalendar.model.Content;
 import dev.arvip.contentcalendar.model.Status;
 import dev.arvip.contentcalendar.model.Type;
 import jakarta.annotation.PostConstruct;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Repository;
-
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;

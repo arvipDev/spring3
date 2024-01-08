@@ -2,9 +2,7 @@ package dev.arvip.contentcalendar.controller;
 
 import dev.arvip.contentcalendar.model.Person;
 import dev.arvip.contentcalendar.model.Sex;
-import dev.arvip.contentcalendar.repository.ContentRepository;
 import dev.arvip.contentcalendar.repository.PersonRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;

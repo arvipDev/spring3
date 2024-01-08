@@ -1,4 +1,5 @@
 package dev.arvip.contentcalendar.config;
+
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.arvip.contentcalendar.model.Content;
@@ -7,7 +8,6 @@ import dev.arvip.contentcalendar.repository.ContentRepository;
 import dev.arvip.contentcalendar.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import java.io.InputStream;

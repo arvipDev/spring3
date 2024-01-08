@@ -1,9 +1,3 @@
-an: My new app
-as: dev in progress
-cc:
-  appName: My new app name
-  appStatus: My new aoo status - dev in progress
-
 management:
   endpoints:
     web:

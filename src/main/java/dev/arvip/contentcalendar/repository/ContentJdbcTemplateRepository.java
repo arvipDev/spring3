@@ -5,13 +5,11 @@ import dev.arvip.contentcalendar.model.Status;
 import dev.arvip.contentcalendar.model.Type;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
-import org.springframework.http.HttpRange;
 import org.springframework.http.HttpStatus;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.server.ResponseStatusException;
 
-import javax.management.Query;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDateTime;

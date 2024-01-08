@@ -2,13 +2,11 @@ package dev.arvip.contentcalendar.repository;
 
 import dev.arvip.contentcalendar.model.Person;
 import dev.arvip.contentcalendar.model.Sex;
-import dev.arvip.contentcalendar.model.Status;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.server.ResponseStatusException;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
