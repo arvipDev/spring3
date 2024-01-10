@@ -45,6 +45,8 @@ spring:
 #    generate-unique-name: false
 #    name: myapp
 #    initialize: true
+#  session:
+#    store-type: jdbc
   sql:
     init:
       mode: always
