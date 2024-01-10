@@ -10,3 +10,5 @@ spring:
     init:
       mode: always
       schema-locations: classpath:schema.sql
+  session:
+    store-type: jdbc
